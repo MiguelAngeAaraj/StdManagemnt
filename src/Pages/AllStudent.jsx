@@ -11,7 +11,7 @@ const AllStudent = () => {
             const Search = await axios.get("https://peopleleb.herokuapp.com/people")
             setStudents(await Search.data)
         }
-        FetchData()
+      // FetchData()
     })
   return (
    <Box
