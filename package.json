@@ -2,7 +2,7 @@
   "name": "javaswingproj",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://peopleleb.herokuapp.com",
+ 
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",

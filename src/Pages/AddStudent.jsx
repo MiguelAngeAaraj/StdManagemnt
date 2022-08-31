@@ -35,7 +35,7 @@ const AddStudent = () => {
         lastName:Lastname,
         age:Age}
         try{ 
-        await axios.post(`/people`,Form,{
+        await axios.post(`https://peopleleb.herokuapp.com/people`,Form,{
           headers:{
             'Content-Type':'application/json'
           }

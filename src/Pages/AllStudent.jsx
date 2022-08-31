@@ -8,7 +8,7 @@ const AllStudent = () => {
     const [Students,setStudents] = useState([])
     useEffect(() => {
         const FetchData = async() => {
-            const Search = await axios.get("/people")
+            const Search = await axios.get("https://peopleleb.herokuapp.com/people")
             setStudents(await Search.data)
         }
         FetchData()
@@ -51,7 +51,7 @@ const AllStudent = () => {
                             
                             const DeleteBtn = async() => {
                                 try{
-                                await axios.delete(`/people/${student.id}`)
+                                await axios.delete(`https://peopleleb.herokuapp.com/people/${student.id}`)
                                 setStudents(student => student.filter(std => std.id !== student.id))    
                             }catch(e) {
 
