@@ -41,7 +41,7 @@ return (
       lastName:Lastname,
       age:Age}
       try{ 
-      await axios.put(`https://peopleleb.herokuapp.com/people`,Form,{
+      await axios.put(`/people`,Form,{
         headers:{
           'Content-Type':'application/json'
         }

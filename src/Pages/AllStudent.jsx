@@ -8,10 +8,10 @@ const AllStudent = () => {
     const [Students,setStudents] = useState([])
     useEffect(() => {
         const FetchData = async() => {
-            const Search = await axios.get("https://peopleleb.herokuapp.com/people")
+            const Search = await axios.get("/people")
             setStudents(await Search.data)
         }
-      // FetchData()
+       FetchData()
     })
   return (
    <Box
@@ -51,7 +51,7 @@ const AllStudent = () => {
                             
                             const DeleteBtn = async() => {
                                 try{
-                                await axios.delete(`https://peopleleb.herokuapp.com/people/${student.id}`)
+                                await axios.delete(`/people/${student.id}`)
                                 setStudents(student => student.filter(std => std.id !== student.id))    
                             }catch(e) {
 
